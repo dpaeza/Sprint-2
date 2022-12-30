@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+:root{
+    --bordermorado: hsl(249, 99%, 64%);
+    --letra: hsl(278, 94%, 30%);
+    --red: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --bordergris: hsl(270, 3%, 87%); 
+    --letragris: hsl(279, 6%, 55%);
+    --confirm: hsl(278, 68%, 11%);
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+#nuevoPcero {
+    color: red;
+}
+
+.nuevoP{
+    color: red;
+    margin-bottom: 10px;
+
+    /* margin-bottom: 20px; */
+}
+
+#nuevoPdos{
+    color: #ff0000;
+}
+
+#nuevoPtres {
+    color: red;
+}
+
+#nuevoPcuatro {
+    color: red;
+}
+
+.error{
+    border: #ff0000;
+}
+
+/* Image del aside izquiero */
+.imagenAside{
+    width: 30vw;
+    height: 100vh;
+    background-size: contain;
+}
+
+.imagenUp{
+    width: 0;
+    height: 0;
+    background-size: contain;
+}
+
+/* contenedor del form */
+.main{
+    display: flex;
+    position: absolute;
+    top: 33vh;
+    left: 55vw;
+}
+
+/* Formulario */
+form{
+    width: 290px;
+    height: 270px;
+    font-size: 11px;
+    /* border: 2px solid black; */
+}
+
+
+.casillasLargas{
+    width: 285px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.casillasCortas{
+    width: 70px;
+}
+
+.casillaCVC{
+    width: 130px;
+}
+
+.casillasTodas{
+    border-radius: 8px;
+    height: 35px;
+    border: 1px solid var(--bordergris);
+    color: var(--letragris);
+    padding-left: 10px;
+}
+.casillasTodas:focus{
+    outline: 1px solid var(--bordermorado);
+    color: var(--letra);
+}
+
+.letraMorada{
+    color: var(--letra);
+    letter-spacing: 1px;
+}
+.contCasillaCortas{
+    display: flex;
+    gap: 5px;
+}
+
+.division{
+    display: flex;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.buttonConfirm{
+    border-radius: 8px;
+    height: 35px;
+    color: var(--White);
+    background-color: var(--confirm);
+    width: 285px;
+    letter-spacing: 1px;
+}
+
+.buttonConfirm:hover{
+    background-color: var(--letragris);
+    cursor: pointer;
+    border: 0px;
+}
+
+/* imagenes TC*/
+
+.absoluta{
+    display: flex;
+    position: absolute;
+}
+
+/* TC front */
+.ccfront{
+    background-image: url(./images/bg-card-front.png);
+    background-size: contain;
+    display: flex;
+    position: relative;
+    top: 130px;
+    left: 16vw;
+    height: 160px;
+    width: 290px;
+    padding: 15px;
+    letter-spacing: 1px;
+}
+
+.logo{
+    height: 33px;
+}
+
+.numeroTarjeta{
+    margin-top: 42px;
+    color: var(--White);
+    font-size: 18px;
+}
+
+.divisionTarjeta{
+    display: flex;
+    justify-content: space-between;
+    color: var(--White);
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+/* TC back */
+.ccback{
+    background-image: url(./images/bg-card-back.png);
+    background-size: contain;
+    height: 160px;
+    width: 290px;
+    display: flex;
+    position: relative;
+    top: 160px;
+    left: 20vw;
+}
+
+.cvc{
+    color: var(--White);
+    margin: 72px 0px 0px 230px ;
+    font-size: 11px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 900px){
+    .main {
+        left: 60vw;
+    }
+}
+
+@media screen and (max-width: 744px) {
+    .ccfront{
+        left: 5vw;
+     }
+   .ccback {
+       left: 5vw;
+   }
+}
+
+@media screen and (max-width: 570px) {
+    .ccfront {
+        left: 0vw;
+    }
+
+    .ccback {
+        left: 0vw;
+    }
+} 
+
+@media screen and (max-width: 530px) {
+    .main {
+        display: flex;
+        position: static;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+    .absoluta {
+        display: flex;
+        position: static;
+    }
+    .ccfront {
+        background-image: url(./images/bg-card-front.png);
+        position: absolute;
+        top: 110px;
+        left: 2vw;
+    }
+    .ccback {
+        position: absolute;
+        top: 15px; 
+        left: 40vw;
+    }
+    .imagenAside {
+     width: 0vw;
+     height: 0vh;
+    }
+    .imagenUp{
+     width: 100vw;
+     height: 40vh;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .ccback {
+        position: absolute;
+        left: 20vw;
+    }
+}
+
+@media screen and (max-width: 387px) {
+    .ccback {
+        position: absolute;
+        left: 10vw;
+    }
+}
+
+@media screen and (max-width: 337px) {
+    .ccback {
+        position: absolute;
+        left: 0vw;
+    }
+}
+
+/* Thank you Section */
+
+.thankYou{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 33vh;
+    left: 55vw;
+    
+}
+
+.iconCheck{
+    height: 45px;
+    width: 45px;
+    align-self: center;
+    background-size: contain;
+}
+
+.thankYouText{
+    color: var(--letra);
+    font-size: 25px;
+    letter-spacing: 1px;
+    align-self: center;
+    margin: 17px 0 14px;
+}
+
+.pThank{
+    color: var(--letragris);
+    font-size: 12px;
+    letter-spacing: 1px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .thankYou {
+        left: 60vw;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .thankYou{
+        display: flex;
+        position: static;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2px;
+    }
+}
